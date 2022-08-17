@@ -18,6 +18,7 @@ form, #game{
     width: 250px;
     padding: 20px;
     margin:20px;
+    
 }
 form *{
     width: -webkit-fill-available;
