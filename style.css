@@ -1,9 +1,14 @@
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+*{
+    font-family: 'Poppins', sans-serif;
+}
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    height: 100%;
+    flex-direction: column;
 }
 form, #game{
     display: flex;

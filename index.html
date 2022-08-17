@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spy - Rita's Version</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <h1 style="padding:20px 15px;">
+        Spy - The Lebanese Version
+    </h1>
     <div id="startPage">
         <p id="error_msg"></p>
         <form onsubmit="submit_start(event)">
@@ -16,7 +22,7 @@
             <input id="input_nb_players" type="number" min="2" max="100" step="1" placeholder="Number of players">
             <label for="input_nb_spies">Number of spies</label>
             <input id="input_nb_spies" type="number" min="1" max="100" step="1" placeholder="Number of spies">
-            <input type="submit" name="submit" id="submit_btn">
+            <input type="submit" name="submit" id="submit_btn" style="padding: 5px 10px;">
         </form>
     </div>
     <div id="game">
