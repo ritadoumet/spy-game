@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spy - Rita's Version</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="startPage">
+        <p id="error_msg"></p>
+        <form onsubmit="submit_start(event)">
+            <label for="input_nb_players">Number of players</label>
+            <input id="input_nb_players" type="number" min="2" max="100" step="1" placeholder="Number of players">
+            <label for="input_nb_spies">Number of spies</label>
+            <input id="input_nb_spies" type="number" min="1" max="100" step="1" placeholder="Number of spies">
+            <input type="submit" name="submit" id="submit_btn">
+        </form>
+    </div>
+    <div id="game">
+        <p >Player #<span id="player_nb"></span></p>
+        <div id="flip-card" onclick="flip_card()">
+            <div id="flip-card-inner">
+                <div id="flip-card-front">
+                    Click to reveal the word
+                </div>
+                <div id="flip-card-back">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
