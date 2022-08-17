@@ -327,7 +327,8 @@ var dictionary=[
     "Pen",
     "Paper",
     "The Twin Towers",
-    "Barack Obama",
-    "Feminism",
-    "Chernobyl"
+    "Barack Obama", "Mariam Nour", "Myriam Klink",
+    "Feminism", "Bonjus haram", "El Dahye",
+    "Chernobyl", "Mjaddara", "Hommos", "Popcorn","Mar Charbel"
+
 ]
