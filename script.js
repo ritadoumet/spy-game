@@ -6,10 +6,12 @@ var game=document.getElementById('game');
 var player_nb = document.getElementById('player_nb');
 var flip_card_back = document.getElementById('flip-card-back');
 var flip_card_inner = document.getElementById("flip-card-inner");
+var categories = document.getElementById('categories')
 var cur_player;
 var nb_of_players;
 var nb_of_spies;
 var word;
+var dictionary=[];
 var spies;
 var word_revealed = false;
 new_game();
@@ -24,10 +26,30 @@ function submit_start(e){
         error_msg.innerHTML="Illegal value for number of spies";
         return false;
     }
+    var options = categories.options.selectedIndex;
+    if(options==-1){
+        error_msg.innerHTML="Please select categorie(s)";
+        return false;
+    }
     error_msg.innerHTML="";
     nb_of_players = parseInt(input_nb_players.value);
     nb_of_spies = parseInt(input_nb_spies.value);
+    dictionary = [];
+    for (var option of categories.options) {
+            if (option.selected) {
+                dictionary = dictionary.concat(data[parseInt(option.value)]);
+            }
+        }
+        
+    var wordindex = generateRandom(0, dictionary.length-1);
+    word=dictionary[wordindex];
     start_game()
+}
+function selectDictionary(e){
+    const selected = document.querySelectorAll('#categories option:checked');
+    if (selected.length==0){
+        e.options[0].selected=true;
+    }
 }
 function start_game(){
     startPage.style.display="none";
@@ -43,13 +65,7 @@ function start_game(){
     }
 }
 function new_game(){
-    nb_of_players=0;
-    nb_of_spies=0;
     cur_player=1;
-    input_nb_spies.value=0;
-    input_nb_players.value=0;
-    var wordindex = generateRandom(0, dictionary.length-1);
-    word=dictionary[wordindex];
     startPage.style.display="flex";
     game.style.display="none";
 }

@@ -9,6 +9,9 @@ body{
     height: 100%;
     flex-direction: column;
 }
+#error_msg{
+  color:brown
+}
 #startPage{
 display: flex;
     flex-direction: column;
@@ -81,4 +84,22 @@ form *{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  select#categories{
+    min-height: 160px;
+  }
+  img{
+    width: 60px;
+    float: right;
+  }
+  @media only screen and (min-width: 600px) {
+    form{
+      flex-direction: row;
+      width: 80%;
+      padding: 20px;
+      margin:20px;
+  }
+    img{
+      width:140px;
+    }
   }

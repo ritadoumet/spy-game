@@ -12,21 +12,35 @@
 </head>
 
 <body>
-    <h1 style="padding:20px 15px;">
-        Spy - The Lebanese Version
-    </h1>
+
     <div id="startPage">
-        <p id="error_msg"></p>
+
         <form onsubmit="submit_start(event)">
-            <label for="input_nb_players">Number of players</label>
-            <input id="input_nb_players" type="number" min="2" max="100" step="1" placeholder="Number of players">
-            <label for="input_nb_spies">Number of spies</label>
-            <input id="input_nb_spies" type="number" min="1" max="100" step="1" placeholder="Number of spies">
-            <input type="submit" name="submit" id="submit_btn" style="padding: 5px 10px;">
+            <div>
+                <h1 style="padding:20px 15px;">
+                    Spy - The Lebanese Version
+                    <img src="images/spy.png" alt="Spy Icon">
+                </h1>
+            </div>
+            <div>
+                <p id="error_msg"></p>
+                <label for="input_nb_players">Number of players</label>
+                <input id="input_nb_players" type="number" min="2" max="100" step="1" placeholder="Number of players">
+                <label for="input_nb_spies">Number of spies</label>
+                <input id="input_nb_spies" type="number" min="1" max="100" step="1" placeholder="Number of spies">
+                <select name="categories" id="categories" multiple onchange="selectDictionary(this)">
+                    <option name="general" value="0">General</option>
+                    <option name="culture" value="1">Culture</option>
+                    <option name="lebanese" value="2">Lebanese</option>
+                    <option name="aims" value="3">AIMS</option>
+                </select>
+                <input type="submit" name="submit" id="submit_btn" style="padding: 5px 10px;">
+            </div>
+
         </form>
     </div>
     <div id="game">
-        <p >Player #<span id="player_nb"></span></p>
+        <p>Player #<span id="player_nb"></span></p>
         <div id="flip-card" onclick="flip_card()">
             <div id="flip-card-inner">
                 <div id="flip-card-front">
