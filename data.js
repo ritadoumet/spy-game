@@ -397,26 +397,5 @@ var lebanese=[
     "The Lebanese Revolution",
     "The Lebanese Civil War",
 ]
-var AIMS = [
-    "Christian",
-    "Rita",
-    "Chady",
-    "Sandy",
-    "Jane",
-    "Elie",
-    "Najatte",
-    "Habib"
-]
-var data = [general, culture, lebanese, AIMS]
-// var dark_dirty = [
-//     "Aborted feotus",
-//     "Your dead grandma",
-//     "The plague",
-//     "The beirut blast",
-//     "Orphans",
-//     "Suicide",
-//     "Dildo",
-//     "Vibrator",
-//     "Morning wood",
-//     ""
-// ]
+
+var data = [general, culture, lebanese]
